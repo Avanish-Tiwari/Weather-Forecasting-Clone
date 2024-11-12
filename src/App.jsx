@@ -8,13 +8,13 @@ import {  PinCodeProvider } from './components/PinCodeContext'
 function App() {
 
   return (
-    <div className='min-h-screen flex flex-row md:flex-col overflow-auto grid-cols-2'>
+    <div className='grid grid-cols-3 min-h-screen'>
     <PinCodeProvider>
-      <div className='flex'>
+      <div className='col-span-1'>
      <Header/>
 
       </div>
-     <div  >
+     <div  className='col-span-2'>
     <Outlet />
 
      </div>

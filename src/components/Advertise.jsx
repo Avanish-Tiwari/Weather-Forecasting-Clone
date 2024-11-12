@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 export default function Advertise() {
-  const [addData, setAddData] = useState("")
+  const [addData, setAddData] = useState("Testing")
 
   useEffect(() => {
     const link = "https://api.quotable.io/random"
@@ -16,7 +16,7 @@ export default function Advertise() {
   }, [])
 
   return (
-    <div  className="flex flex-col h-auto align-items-center p-4 gap-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div  className="m-4 h-auto align-items-center p-4 gap-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500">
       <div>
       {addData.content}
       

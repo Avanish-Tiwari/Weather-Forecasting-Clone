@@ -54,7 +54,7 @@ export default function TodayWeather({ details }) {
   // console.log('Weather Details:', weatherDetails);
   console.log(details)
   return (
-    <div className="p-4 gap-4 grid rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500">
+    <div className="p-4 m-4 gap-4 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500">
       {/* This will now re-render when selectedDay changes */}
       <Dailywrapper data={filterDate[selectedDay]} />
       <div>

@@ -70,10 +70,10 @@ export default function Content () {
   
     //  console.log(location)
   return (
-    <div className='flex justify-around grid grid-cols-2 gap-4 items-center'>
+    <>
         
         <TodayWeather details={details} />
         <Advertise details={details}/>
-    </div>
+    </>
   )
 }
