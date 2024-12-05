@@ -6,7 +6,7 @@ import {  PinCodeProvider } from './components/PinCodeContext'
 
 
 function App() {
-
+  
   return (
     <div className='grid grid-cols-3 min-h-screen'>
     <PinCodeProvider>

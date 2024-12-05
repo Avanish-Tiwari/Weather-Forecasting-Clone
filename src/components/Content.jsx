@@ -4,10 +4,10 @@ import Advertise from './Advertise'
 import { PinCodeContext } from './PinCodeContext';
 
 export default function Content () {
+  const API_KEY=import.meta.env.VITE_API_KEY
     const [location, setLocation] = useState({ latitude: null, longitude: null });
     const [error, setError] = useState(null);
     const [details,setDetails]=useState({})
-
     const { pinCode, setPinCode } = useContext(PinCodeContext);
     // useEffect(()=>console.log(pinCode),[pinCode])
     /// fetching location latitude and longitude
@@ -39,7 +39,7 @@ export default function Content () {
     useEffect(() => {
       if (location.latitude && location.longitude) {
         const fetchCityAndZipcode = async (latitude, longitude,pinCode) => {
-          const apiKey = 'd7160ebb1d424d408926ca61f9ec4e8a';
+          const apiKey = API_KEY;
           const urlLATLong = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
           const urlZip=`https://api.opencagedata.com/geocode/v1/json?q=${pinCode}&countrycode=IN&key=${apiKey}`
           const url=pinCode.length===6?urlZip:urlLATLong

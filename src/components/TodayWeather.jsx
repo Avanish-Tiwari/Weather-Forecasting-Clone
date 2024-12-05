@@ -52,7 +52,6 @@ export default function TodayWeather({ details }) {
   // console.log('Selected Day Date:', new Date(filterDate[selectedDay]?.dt_txt));
   // console.log('Filter Date:', filterDate);
   // console.log('Weather Details:', weatherDetails);
-  console.log(details)
   return (
     <div className="p-4 m-4 gap-4 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500">
       {/* This will now re-render when selectedDay changes */}

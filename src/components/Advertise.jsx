@@ -10,10 +10,27 @@ export default function Advertise() {
       const response = await fetch(link)
       const data = await response.json()
       setAddData(data)
-      // console.log(data)
+      console.log(data)
     }
     fetchData()
   }, [])
+
+  async function getData() {
+    const url = "https://api.quotable.io/random";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+  
+      const json = await response.json();
+      setAddData(json)
+      console.log(json);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+  getData()
 
   return (
     <div  className="m-4 h-auto align-items-center p-4 gap-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500">
